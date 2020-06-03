@@ -1,3 +1,12 @@
+# Solution 
+1) The database is initialized by `python db_init.py`. 
+
+2) Then commandy `python api.py` runs the flusk api. 
+
+3) The database can be updated by `curl http://localhost:5000/classify?f3=A&f1=0.23&f2=0.4` and viewd by `curl http://localhost:5000/stats`
+
+4) My analysis of the *training_model.csv* can be found in python notebook (developped on Kaggle) *sqn_classification.ipynb*
+
 # Interview Task
 
 The goal of this task is to create a simple machine learning application.
