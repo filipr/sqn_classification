@@ -67,11 +67,6 @@ class Classify(Resource):
 
         f3 = args['f3']
 
-        # TODO: check parameter types
-        if None in args.values():
-            return jsonify({"status": "ERROR", "error_message": "f1 is not a float."})
-
-
         # testing version
         #pred = 1 if max(f1, f2) > 1 else 0
 
@@ -81,7 +76,6 @@ class Classify(Resource):
 
         data = np.array([f1, f2, letter_to_number[f3]]).reshape(1, 3)
         pred = int(loaded_model.predict(data))
-
 
         # save it into the database
         conn = sqlite3.connect(DATABASE_PATH)
